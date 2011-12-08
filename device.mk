@@ -133,7 +133,12 @@ PRODUCT_PACKAGES += \
 	TQS_D_1.7_127x.ini \
 	crda \
 	regulatory.bin \
-	calibrator
+	calibrator \
+	wl1271-nvs.bin \
+	wl128x-fw-mr.bin.r4 \
+	wl128x-fw-mr.bin.r5 \
+	wl128x-fw-mr_plt.bin.r4 \
+	wl128x-fw-mr_plt.bin.r5 
 
 # Audio HAL module
 PRODUCT_PACKAGES += audio.primary.blaze
