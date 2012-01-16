@@ -21,6 +21,7 @@
 # are responsible for having their own logic, for fine-grained control.
 
 LOCAL_PATH := $(call my-dir)
+ifeq ($(TARGET_DEVICE), blaze)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := blaze_hdcp_keys
@@ -44,4 +45,8 @@ $(LOCAL_BUILT_MODULE):
 # if some modules are built directly from this directory (not subdirectories),
 # their rules should be written here.
 
+ifneq ($(TARGET_SIMULATOR),true)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+endif
+
+endif
