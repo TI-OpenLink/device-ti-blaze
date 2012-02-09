@@ -132,6 +132,11 @@ PRODUCT_PACKAGES += \
 # Audio HAL module
 PRODUCT_PACKAGES += audio.primary.blaze
 
+# tinyalsa utils
+PRODUCT_PACKAGES += \
+	tinymix \
+	tinyplay \
+	tinycap
 
 # BlueZ a2dp Audio HAL module
 PRODUCT_PACKAGES += audio.a2dp.default
