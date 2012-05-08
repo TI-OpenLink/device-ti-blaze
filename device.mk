@@ -196,3 +196,4 @@ $(call inherit-product-if-exists, device/ti/proprietary-open/omap4/ti-omap4-vend
 $(call inherit-product-if-exists, device/ti/proprietary-open/wl12xx/wlan/wl12xx-wlan-fw-products.mk)
 $(call inherit-product-if-exists, device/ti/common-open/s3d/s3d-products.mk)
 $(call inherit-product-if-exists, device/ti/proprietary-open/omap4/ducati-full_blaze.mk)
+$(call inherit-product-if-exists, device/modem-vendor/device.mk)
