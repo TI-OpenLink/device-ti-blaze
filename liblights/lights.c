@@ -86,7 +86,7 @@ write_int(char const* path, int value)
         return amt == -1 ? -errno : 0;
     } else {
         if (already_warned == 0) {
-            LOGE("write_int failed to open %s\n", path);
+            ALOGE("write_int failed to open %s\n", path);
             already_warned = 1;
         }
         return -errno;
@@ -136,7 +136,7 @@ set_light_buttons(struct light_device_t* dev,
     int on = is_lit(state);
 
 #if 0
-    LOGD("set_light_button on=%d\n", on ? 255 : 0);
+    ALOGD("set_light_button on=%d\n", on ? 255 : 0);
 #endif
 
     pthread_mutex_lock(&g_lock);
@@ -171,7 +171,7 @@ set_light_battery(struct light_device_t* dev,
 
     colorRGB = state->color;
 #if 0
-    LOGD("set_light_battery colorRGB=%08X, onMS=%d, offMS=%d****************\n",
+    ALOGD("set_light_battery colorRGB=%08X, onMS=%d, offMS=%d****************\n",
             colorRGB, onMS, offMS);
 #endif
     err = write_int(CHARGING_LED_FILE, colorRGB ? 255 : 0);
@@ -203,7 +203,7 @@ set_light_notification(struct light_device_t* dev,
 
     colorRGB = state->color;
 #if 0
-    LOGD("set_light_notification colorRGB=%08X, onMS=%d, offMS=%d\n",
+    ALOGD("set_light_notification colorRGB=%08X, onMS=%d, offMS=%d\n",
             colorRGB, onMS, offMS);
 #endif
 
@@ -259,7 +259,7 @@ set_light_attention(struct light_device_t* dev,
 
     colorRGB = state->color;
 #if 0
-    LOGD("set_light_attention colorRGB=%08X, onMS=%d, offMS=%d\n",
+    ALOGD("set_light_attention colorRGB=%08X, onMS=%d, offMS=%d\n",
             colorRGB, onMS, offMS);
 #endif
 
