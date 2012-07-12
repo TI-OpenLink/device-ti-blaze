@@ -191,7 +191,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	blaze_hdcp_keys
 
-$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
 $(call inherit-product-if-exists, hardware/ti/wpan/ti-wpan-products.mk)
 $(call inherit-product-if-exists, vendor/ti/blaze/device-vendor.mk)
