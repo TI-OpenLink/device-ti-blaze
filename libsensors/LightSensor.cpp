@@ -78,7 +78,7 @@ int LightSensor::enable(int32_t handle, int en)
             }
             err = write(fd, buf, sizeof(buf));
 	    if (err) {
-                 LOGD("LightSensor:Write error\n");
+                 ALOGD("LightSensor:Write error\n");
                  close(fd);
                  return -1;
             }
@@ -119,7 +119,7 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
         if (type == EV_LED) {
             if (event->code == EVENT_TYPE_LIGHT) {
                 mPendingEvent.light = event->value;
-                LOGD("LightSensor: Received LUX value=%d",
+                ALOGD("LightSensor: Received LUX value=%d",
                    event->value);
             }
         } else if (type == EV_SYN) {
@@ -131,7 +131,7 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
                 mPreviousLight = mPendingEvent.light;
             }
         } else {
-            LOGE("LightSensor: unknown event (type=%d, code=%d)",
+            ALOGE("LightSensor: unknown event (type=%d, code=%d)",
                     type, event->code);
         }
         mInputReader.next();
