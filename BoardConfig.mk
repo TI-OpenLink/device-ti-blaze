@@ -46,8 +46,8 @@ BOARD_HAVE_BLUETOOTH := true
 TARGET_NO_BOOTLOADER := true
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_RECOVERY_UI_LIB := librecovery_ui_blaze
+#TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_blaze
 # device-specific extensions to the updater binary
 TARGET_RELEASETOOLS_EXTENSIONS := device/ti/blaze
 
