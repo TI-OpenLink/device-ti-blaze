@@ -22,7 +22,7 @@
 BOARD_USES_GENERIC_AUDIO := false
 USE_CAMERA_STUB := true
 
-OMAP_ENHANCEMENT := true
+OMAP_ENHANCEMENT :=
 
 ifdef OMAP_ENHANCEMENT
 OMAP_ENHANCEMENT_S3D := true
@@ -30,7 +30,7 @@ OMAP_ENHANCEMENT_CPCAM := true
 OMAP_ENHANCEMENT_VTC := true
 endif
 
-ENHANCED_DOMX := true
+ENHANCED_DOMX :=
 BLTSVILLE_ENHANCEMENT :=true
 USE_ITTIAM_AAC := true
 # Use the non-open-source parts, if they're present
@@ -113,3 +113,6 @@ BOARD_LIB_DUMPSTATE := libdumpstate.blaze
 
 BOARD_VENDOR_TI_GPS_HARDWARE := omap4
 BOARD_GPS_LIBRARIES := libgps
+
+# Common device independent definitions
+include device/ti/common-open/BoardConfig.mk
