@@ -2,17 +2,19 @@ import init.omap4blazeboard.usb.rc
 import init.modem.rc
 
 on early-init
-	export EXTERNAL_STORAGE /mnt/sdcard
-	mkdir /mnt/sdcard 0000 system system
-	# for backwards compatibility
-	symlink /mnt/sdcard /sdcard
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/sdcard1
+    mkdir /storage 0050 system sdcard_r
+    mkdir /storage/sdcard0 0000 system system
+    mkdir /storage/sdcard1 0000 system system
+    # for backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
 
-# create Ext SDcard mountpoint
-	mkdir /mnt/ext_sdcard 0000 system system
 
 
 on post-fs-data
-	# we will remap this as /mnt/sdcard with the sdcard fuse tool
+	# we will remap this as /storage/sdcard0 with the sdcard fuse tool
 	mkdir /data/media 0775 media_rw media_rw
 	chown media_rw media_rw /data/media
 	mkdir /data/misc/wifi 0770 wifi wifi
