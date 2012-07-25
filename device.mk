@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
         tfsw_jce_provider.jar \
         tfctrl
 
+# Enable AAC 5.1 decode (decoder)
+PRODUCT_PROPERTY_OVERRIDES += \
+	media.aac_51_output_enabled=true
+
 # for bugmailer
 PRODUCT_PACKAGES += send_bug
 PRODUCT_COPY_FILES += \
