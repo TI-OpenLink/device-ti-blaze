@@ -31,7 +31,7 @@ OMAP_ENHANCEMENT_CPCAM := true
 OMAP_ENHANCEMENT_VTC := true
 endif
 
-ENHANCED_DOMX :=
+ENHANCED_DOMX := true
 BLTSVILLE_ENHANCEMENT :=true
 USE_ITTIAM_AAC := true
 # Use the non-open-source parts, if they're present
