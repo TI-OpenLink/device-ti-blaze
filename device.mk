@@ -138,6 +138,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/modem-detect.sh:system/vendor/bin/modem-detect.sh
 # Audio HAL module
 PRODUCT_PACKAGES += audio.primary.omap4
+PRODUCT_PACKAGES += audio.hdmi.omap4
 
 # tinyalsa utils
 PRODUCT_PACKAGES += \
